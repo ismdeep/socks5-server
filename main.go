@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/armon/go-socks5"
-	"github.com/ismdeep/ismdeep-go-utils/args_util"
+	"github.com/ismdeep/args"
 	"log"
 )
 
@@ -12,17 +12,17 @@ func ShowHelpMsg() {
 }
 
 func main() {
-	if args_util.Exists("--help") {
+	if args.Exists("--help") {
 		ShowHelpMsg()
 		return
 	}
 
-	if !args_util.Exists("-l") {
+	if !args.Exists("-l") {
 		ShowHelpMsg()
 		return
 	}
 
-	bindAddressPort := args_util.GetValue("-l")
+	bindAddressPort := args.GetValue("-l")
 
 	conf := &socks5.Config{}
 	server, err := socks5.New(conf)

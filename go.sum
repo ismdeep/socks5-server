@@ -1,7 +1,7 @@
 github.com/armon/go-socks5 v0.0.0-20160902184237-e75332964ef5 h1:0CwZNZbxp69SHPdPJAN/hZIm0C4OItdklCFmMRWYpio=
 github.com/armon/go-socks5 v0.0.0-20160902184237-e75332964ef5/go.mod h1:wHh0iHkYZB8zMSxRWpUBQtwG5a7fFgvEO+odwuTv2gs=
-github.com/ismdeep/ismdeep-go-utils v0.0.2 h1:bl8VrRu1/t1RExplNtXiR9wq9wjCzmN9yEokJTcNXsU=
-github.com/ismdeep/ismdeep-go-utils v0.0.2/go.mod h1:94RTJ3FQDoI2QO76BNqwhKT6yzCtuqrPNI1X4LxAlJM=
+github.com/ismdeep/args v0.0.1 h1:egFwqL8dLYDKqlQ5yBX52Edo7H9QmO+wIaEiia8hqtg=
+github.com/ismdeep/args v0.0.1/go.mod h1:GB94gj4zvBXS15/Q8EcCtS3K99K497De0dtVsLG6Omg=
 golang.org/x/net v0.0.0-20210119194325-5f4716e94777 h1:003p0dJM77cxMSyCPFphvZf/Y5/NXf5fzg6ufd1/Oew=
 golang.org/x/net v0.0.0-20210119194325-5f4716e94777/go.mod h1:m0MpNAwzfU5UDzcl9v0D8zg8gWTRqZa9RBIspLL5mdg=
 golang.org/x/sys v0.0.0-20201119102817-f84b799fce68/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
