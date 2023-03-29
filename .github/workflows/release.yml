@@ -10,7 +10,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v1
       - name: Docker release
-        uses: elgohr/Publish-Docker-Github-Action@main
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: ismdeep/socks5-server
           username: ismdeep
