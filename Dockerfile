@@ -1,4 +1,4 @@
-FROM golang:1.19 AS builder
+FROM golang:1.23.8-bullseye AS builder
 WORKDIR /src
 COPY . .
 RUN go build -o bin/main github.com/ismdeep/socks5-server

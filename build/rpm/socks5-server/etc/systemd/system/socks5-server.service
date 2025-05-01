@@ -1,0 +1,9 @@
+[Unit]
+Description=Socks5 Server
+[Service]
+ExecStart=/usr/bin/socks5-server
+Restart=always
+User=root
+Group=root
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,25 @@
+services:
+
+  socks5-server-builder-deb-amd64:
+    container_name: socks5-server-builder-deb-amd64
+    image: ismdeep/socks5-server-builder-deb-amd64:latest
+    platform: linux/amd64
+    restart: always
+
+  socks5-server-builder-deb-arm64:
+    container_name: socks5-server-builder-deb-arm64
+    image: ismdeep/socks5-server-builder-deb-arm64:latest
+    platform: linux/arm64
+    restart: always
+
+  socks5-server-builder-rpm-amd64:
+    container_name: socks5-server-builder-rpm-amd64
+    image: ismdeep/socks5-server-builder-rpm-amd64:latest
+    platform: linux/amd64
+    restart: always
+
+  socks5-server-builder-rpm-arm64:
+    container_name: socks5-server-builder-rpm-arm64
+    image: ismdeep/socks5-server-builder-rpm-arm64:latest
+    platform: linux/arm64
+    restart: always

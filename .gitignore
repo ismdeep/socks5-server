@@ -1,2 +1,19 @@
+# JetBrains
 /.idea/
+
+# macOS
+.DS_Store
+
+# binary
 /bin/
+
+# debian
+/build/deb/socks5-server/usr/bin/
+/debian/.debhelper/
+/debian/files
+/debian/socks5-server/
+/debian/socks5-server.debhelper.log
+/debian/socks5-server.substvars
+
+# output
+/output/

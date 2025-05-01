@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -e
+
+systemctl disable socks5-server --now || true

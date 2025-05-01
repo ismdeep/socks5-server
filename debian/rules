@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_installdeb:
+	dh_installdeb
+	find ${CURDIR}/debian/*/DEBIAN -name conffiles -delete
+
+override_dh_auto_build:
+	go build -o ./build/deb/socks5-server/usr/bin/socks5-server -mod vendor -trimpath -ldflags '-s -w' .
+
+override_dh_auto_clean:
+	echo
+
+override_dh_auto_install:
+	mkdir -p debian/socks5-server/
+	rsync -a -r --no-i-r --info=progress2 --info=name0 --no-owner --no-group --no-perms \
+		./build/deb/socks5-server/ \
+		debian/socks5-server/
