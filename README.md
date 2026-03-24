@@ -2,7 +2,7 @@
 
 ## Release
 
-Push a tag like `v0.1.0` to trigger GitHub Actions release packaging and upload these assets to GitHub Releases.
+Push a tag like `0.0.1` to trigger GitHub Actions release packaging and upload these assets to GitHub Releases.
 The release job now builds everything directly on an `amd64` runner without Docker:
 
 - `build/socks5-server_linux_amd64`
