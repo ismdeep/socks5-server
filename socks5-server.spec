@@ -1,44 +1,33 @@
 Name:      socks5-server
-Version:   0.0.1
+Version:   %{version}
 Release:   1
 
 License:   MIT
-URL:       http://www.example.com/
+URL:       https://github.com/ismdeep/socks5-server
 Summary:   Socks5 Server
-# use build-time generated tar ball.
-Source0:   %{name}.tar.gz
-# (only create temporary directory name, for RHEL5 compat environment)
-# see : http://fedoraproject.org/wiki/Packaging:Guidelines#BuildRoot_tag
-BuildRoot: %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
-
-%define INSTALLDIR %{buildroot}
+Source0:   %{name}-%{version}-%{pkg_arch}.tar.gz
 %define debug_package %{nil}
+%global __strip /bin/true
+%global __objdump /bin/true
 
 %description
 %{summary}
 
 %prep
-%setup -q -n %{name}
+%setup -q -n %{name}-%{version}-%{pkg_arch}
 
 %build
-go build \
-  -o ./build/rpm/socks5-server/usr/bin/socks5-server \
-  -mod vendor \
-  -trimpath \
-  -ldflags "-w -s" \
-  .
 
 %install
-rsync -a -r --no-i-r --info=progress2 --info=name0 --no-owner --no-group --no-perms \
-  ./build/rpm/socks5-server/ \
-  %{INSTALLDIR}/
-
-%clean
+mkdir -p %{buildroot}
+cp -a usr %{buildroot}/
+cp -a etc %{buildroot}/
 
 %files
 %defattr(-,root,root,-)
 /usr/bin/socks5-server
 /etc/systemd/system/socks5-server.service
+/usr/share/doc/socks5-server/LICENSE
 
 %pre
 

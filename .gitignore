@@ -4,8 +4,11 @@
 # macOS
 .DS_Store
 
-# binary
-/bin/
+# vendor
+/vendor/
+
+# build
+/build/
 
 # debian
 /build/deb/socks5-server/usr/bin/
@@ -17,3 +20,5 @@
 
 # output
 /output/
+/.gocache/
+/.gopath/
