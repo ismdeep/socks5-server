@@ -7,10 +7,10 @@ VERSION ?= $(shell bash version.sh)
 .PHONY: build-binary
 build-binary:
 	mkdir -p build
-	CGO_ENABLED=0 GOOS=linux  GOARCH=amd64 go build -o build/socks5-server_linux_amd64  -trimpath -ldflags '-s -w' .
-	CGO_ENABLED=0 GOOS=linux  GOARCH=arm64 go build -o build/socks5-server_linux_arm64  -trimpath -ldflags '-s -w' .
-	CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o build/socks5-server_darwin_amd64 -trimpath -ldflags '-s -w' .
-	CGO_ENABLED=0 GOOS=darwin GOARCH=arm64 go build -o build/socks5-server_darwin_arm64 -trimpath -ldflags '-s -w' .
+	CGO_ENABLED=0 GOOS=linux  GOARCH=amd64 go build -o build/socks5-server_linux_amd64  -mod vendor -trimpath -ldflags '-s -w' .
+	CGO_ENABLED=0 GOOS=linux  GOARCH=arm64 go build -o build/socks5-server_linux_arm64  -mod vendor -trimpath -ldflags '-s -w' .
+	CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o build/socks5-server_darwin_amd64 -mod vendor -trimpath -ldflags '-s -w' .
+	CGO_ENABLED=0 GOOS=darwin GOARCH=arm64 go build -o build/socks5-server_darwin_arm64 -mod vendor -trimpath -ldflags '-s -w' .
 	cd build && sha256sum socks5-server_linux_amd64 > socks5-server_linux_amd64.sha256sum
 	cd build && sha256sum socks5-server_linux_arm64 > socks5-server_linux_arm64.sha256sum
 	cd build && sha256sum socks5-server_darwin_amd64 > socks5-server_darwin_amd64.sha256sum
