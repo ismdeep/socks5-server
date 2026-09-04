@@ -1,0 +1,6 @@
+socks5-server
+
+environment:
+  SOCKS5_SERVER_BIND    bind address, default: 0.0.0.0:3080
+  SOCKS5_USERNAME       username
+  SOCKS5_PASSWORD       password
